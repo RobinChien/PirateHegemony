@@ -3,4 +3,10 @@
     <string name="get_pirate">Get Pirate</string>
     <string name="login">Login</string>
     <string name="my_pirates">My Pirates</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="signup_fragment">Signup Fragment</string>
+    <string name="get_pirate_fragment">Get Pirate Fragment</string>
+    <string name="pirates_fragment">Pirates Fragment</string>
 </resources>

@@ -1,0 +1,85 @@
+{
+  "project_info": {
+    "project_number": "851952314058",
+    "firebase_url": "https://hikingbook-9ead0.firebaseio.com",
+    "project_id": "hikingbook-9ead0",
+    "storage_bucket": "hikingbook-9ead0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851952314058:android:d5337b4e16b6f5fa8ab633",
+        "android_client_info": {
+          "package_name": "com.example.piratehegemony"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851952314058-0ocfhhlui9fdevb92dl33cljetenesff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb_cfby5aspliIKBYjZmz8qWRZHUIGmJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851952314058-c5tllsqu7asmnf9595d658kd0s9qdioo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "851952314058-rpjjushh4ucc1p2asqvfeq0aqrvbtqol.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Taiwan.Zheng-Xiang-Ke.Hikingbook.Hikingbook-Today-Extension",
+                "app_store_id": "1067838748"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:851952314058:android:db541d13422527ad8ab633",
+        "android_client_info": {
+          "package_name": "com.hikingbook.hikingbook"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "851952314058-0ocfhhlui9fdevb92dl33cljetenesff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBb_cfby5aspliIKBYjZmz8qWRZHUIGmJI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "851952314058-c5tllsqu7asmnf9595d658kd0s9qdioo.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "851952314058-rpjjushh4ucc1p2asqvfeq0aqrvbtqol.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "Taiwan.Zheng-Xiang-Ke.Hikingbook.Hikingbook-Today-Extension",
+                "app_store_id": "1067838748"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
