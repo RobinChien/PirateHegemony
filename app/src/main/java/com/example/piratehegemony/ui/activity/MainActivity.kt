@@ -2,18 +2,24 @@ package com.example.piratehegemony.ui.activity
 
 import android.os.Bundle
 import android.os.PersistableBundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import com.example.piratehegemony.R
+import com.example.piratehegemony.data.api.PirateService
+import com.example.piratehegemony.data.model.PirateResponse
 import com.example.piratehegemony.ui.fragment.GetPirateFragment
 import com.example.piratehegemony.ui.fragment.LoginFragment
 import com.example.piratehegemony.ui.fragment.PiratesFragment
+import com.example.piratehegemony.utils.NetworkManager
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.ncapdevi.fragnav.FragNavController
 import kotlinx.android.synthetic.main.activity_main.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class MainActivity : AppCompatActivity(), FragNavController.RootFragmentListener {
-
     private var fragNavController: FragNavController =
         FragNavController(supportFragmentManager, R.id.fragment_container_view)
 
@@ -22,6 +28,23 @@ class MainActivity : AppCompatActivity(), FragNavController.RootFragmentListener
         setContentView(R.layout.activity_main)
         initFragNavController(savedInstanceState)
         initBottomNavigationView()
+
+        fetch_data.setOnClickListener {
+            val apiService = NetworkManager.provideRetrofit(NetworkManager.provideOkHttpClient())
+                .create(PirateService::class.java)
+
+            apiService.fetchPirateList().enqueue(object : Callback<PirateResponse> {
+                override fun onResponse(
+                    call: Call<PirateResponse>,
+                    response: Response<PirateResponse>
+                ) {
+                    Log.d(TAG, "response: ${response.body().toString()}")
+                }
+                override fun onFailure(call: Call<PirateResponse>, t: Throwable) {
+                    Log.d(TAG, "error: ${t.message}" ?: "Get some error")
+                }
+            })
+        }
     }
 
     private fun initFragNavController(savedInstanceState: Bundle?) {
