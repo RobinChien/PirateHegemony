@@ -28,23 +28,6 @@ class MainActivity : AppCompatActivity(), FragNavController.RootFragmentListener
         setContentView(R.layout.activity_main)
         initFragNavController(savedInstanceState)
         initBottomNavigationView()
-
-        fetch_data.setOnClickListener {
-            val apiService = NetworkManager.provideRetrofit(NetworkManager.provideOkHttpClient())
-                .create(PirateService::class.java)
-
-            apiService.fetchPirateList().enqueue(object : Callback<PirateResponse> {
-                override fun onResponse(
-                    call: Call<PirateResponse>,
-                    response: Response<PirateResponse>
-                ) {
-                    Log.d(TAG, "response: ${response.body().toString()}")
-                }
-                override fun onFailure(call: Call<PirateResponse>, t: Throwable) {
-                    Log.d(TAG, "error: ${t.message}" ?: "Get some error")
-                }
-            })
-        }
     }
 
     private fun initFragNavController(savedInstanceState: Bundle?) {
