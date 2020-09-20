@@ -1,6 +1,7 @@
 package com.example.piratehegemony.utils
 
 import com.example.piratehegemony.data.api.HttpRequestInterceptor
+import com.skydoves.sandwich.coroutines.CoroutinesResponseCallAdapterFactory
 import okhttp3.OkHttpClient
 import retrofit2.Retrofit
 import retrofit2.converter.moshi.MoshiConverterFactory
@@ -18,6 +19,7 @@ object NetworkManager {
             .client(okHttpClient)
             .baseUrl("https://pokeapi.co/api/v2/")
             .addConverterFactory(MoshiConverterFactory.create())
+            .addCallAdapterFactory(CoroutinesResponseCallAdapterFactory())
             .build()
     }
 }
