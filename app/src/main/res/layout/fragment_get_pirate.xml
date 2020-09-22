@@ -3,13 +3,25 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/primaryColor"
     tools:context=".ui.fragment.GetPirateFragment">
 
-    <TextView
+    <include
+        android:id="@+id/pirate_card"
+        layout="@layout/card_view_pirate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center" />
+
+    <Button
+        android:id="@+id/button"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:textSize="@dimen/title_text_size"
-        android:text="@string/get_pirate_fragment" />
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="@dimen/margin_base"
+        android:backgroundTint="@color/primaryLightColor"
+        android:text="Get Pirate"
+        android:textColor="@color/secondaryColor"
+        android:textSize="@dimen/sub_title_text_size" />
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

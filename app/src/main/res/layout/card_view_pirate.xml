@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/margin_half"
+    app:strokeWidth="1dp"
+    app:strokeColor="@color/primaryDarkColor"
+    app:cardElevation="0dp"
+    android:clickable="true"
+    android:focusable="true"
+    android:checkable="true"
+    app:cardBackgroundColor="@color/primaryLightColor">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/aoe_arbalester"/>
+
+        <TextView
+            android:id="@+id/pirate_name"
+            android:text="Arbalester"
+            android:textSize="@dimen/item_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginStart="@dimen/margin_half_plus_eight"
+            android:textColor="@color/secondaryLightColor"/>
+
+        <TextView
+            android:id="@+id/pirate_height"
+            android:text="100 cm"
+            android:textSize="@dimen/item_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginStart="@dimen/margin_half_plus_eight"
+            android:textColor="@color/secondaryLightColor"/>
+
+        <TextView
+            android:id="@+id/pirate_weight"
+            android:text="100 kg"
+            android:textSize="@dimen/item_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginStart="@dimen/margin_half_plus_eight"
+            android:textColor="@color/secondaryLightColor"/>
+
+        <TextView
+            android:id="@+id/pirate_attack"
+            android:text="Attack"
+            android:textSize="@dimen/item_text_size"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin_half"
+            android:layout_marginStart="@dimen/margin_half_plus_eight"
+            android:layout_marginBottom="@dimen/margin_half"
+            android:textColor="@color/secondaryLightColor"/>
+    </LinearLayout>
+
+</com.google.android.material.card.MaterialCardView>

@@ -9,13 +9,12 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.piratehegemony.R
-import com.example.piratehegemony.ui.viewmodel.PirateListViewModel
-import kotlinx.android.synthetic.main.fragment_pirates.*
+import com.example.piratehegemony.ui.viewmodel.PiratesViewModel
 
 class PiratesFragment : Fragment() {
     val TAG: String = tag.toString()
-    val pirateListViewModel: PirateListViewModel by lazy {
-        ViewModelProvider(this).get(PirateListViewModel::class.java)
+    val piratesViewModel: PiratesViewModel by lazy {
+        ViewModelProvider(this).get(PiratesViewModel::class.java)
     }
 
     override fun onCreateView(
@@ -32,13 +31,8 @@ class PiratesFragment : Fragment() {
     }
 
     private fun setPirateListViewModel() {
-        pirateListViewModel.pirateListLiveData().observe(viewLifecycleOwner, Observer { pirates ->
+        piratesViewModel.pirateListLiveData().observe(viewLifecycleOwner, Observer { pirates ->
             Log.d(TAG, "Pirates: $pirates")
-            if (!pirates.isNullOrEmpty()) {
-                pirate_text_view.text =
-                    pirates.flatMap { (name, _) -> listOf(name) }
-                        .joinToString(prefix = "<", postfix = ">", separator = "•")
-            }
         })
     }
 
